@@ -1,0 +1,12 @@
+-- This is the message you want to send in the chat
+local message = "StarProject just took your soul."
+
+-- Function to send a message in the chat
+local function sendMessage()
+    local player = game.Players.LocalPlayer
+    local chatService = game:GetService("Chat")
+    chatService:Chat(player.Character.Head, message, Enum.ChatColor.Red)
+end
+
+-- Execute the sendMessage function
+sendMessage()
