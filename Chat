@@ -1,12 +1,14 @@
--- This is the message you want to send in the chat
-local message = "StarProject just took your soul."
+-- Messages you want to send in the chat
+local message1 = "StarProject is your daddy"
+local message2 = "discord.gg/5fWTnKvB4Y"
 
 -- Function to send a message in the chat
-local function sendMessage()
+local function sendMessage(message)
     local player = game.Players.LocalPlayer
     local chatService = game:GetService("Chat")
-    chatService:Chat(player.Character.Head, message, Enum.ChatColor.Red)
+    chatService:Chat(player.Character.Head, message, Enum.ChatColor.Blue)
 end
 
--- Execute the sendMessage function
-sendMessage()
+-- Execute the sendMessage function with both messages
+sendMessage(message1)
+sendMessage(message2)
