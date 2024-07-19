@@ -1,6 +1,6 @@
 -- Messages you want to send in the chat
 local message1 = "StarProject is your daddy"
-local message2 = "discord.gg/5fWTnKvB4Y"
+local message2 = "discord.gg/PwrSGtuEnc"
 
 -- Function to send a message in the chat
 local function sendMessage(message)
