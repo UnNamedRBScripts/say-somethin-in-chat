@@ -1,14 +1,26 @@
--- Messages you want to send in the chat
-local message1 = "StarProject is your daddy"
-local message2 = "discord.gg/PwrSGtuEnc"
+local TextChatService = game:GetService("TextChatService") -- аbсԁеꬵɡһіјκlmпорԛгѕtᴜvԝхуzАВСDЕFԌНІЈКLМNОРQRЅТUVWХҮZ․‑
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
--- Function to send a message in the chat
-local function sendMessage(message)
-    local player = game.Players.LocalPlayer
-    local chatService = game:GetService("Chat")
-    chatService:Chat(player.Character.Head, message, Enum.ChatColor.Blue)
+local function Chat(str)
+    str = tostring(str)
+    if TextChatService.ChatVersion == Enum.ChatVersion.TextChatService then
+        TextChatService.TextChannels.RBXGeneral:SendAsync(str)
+    else
+        ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(str, "All")
+    end
 end
 
--- Execute the sendMessage function with both messages
-sendMessage(message1)
-sendMessage(message2)
+Chat("ЅtагРгојесt оп Тор")
+wait(1.5)
+Chat("ԁіѕсогԁ․ɡɡ/РԝгЅԌtᴜЕпс")
+
+local function showNotification(title, text, duration) -- start of notif
+    game.StarterGui:SetCore("SendNotification", {
+        Title = title; -- dont change these
+        Text = text;
+        Duration = duration;
+    })
+end
+
+-- change these
+showNotification("Credit", "Thanks Xany for chat script", 5)
